@@ -5,3 +5,6 @@ api-version: '1.19'
 commands:
   FastMinecarts:
     description: Reloads the FastMinecarts plugin
+    permission: FastMinecarts.reload
+    permission-message: "§cYou do not have permission to reload FastMinecarts."
+    usage: "Usage: /FastMinecarts reload"
