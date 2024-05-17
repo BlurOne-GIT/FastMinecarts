@@ -1,7 +1,8 @@
 # List of blocks and their corresponding maximum minecart speeds
 # Blocks must be from https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
-# The default minecart speed is 0.4
-default-speed: 2.0
+# The vanilla default minecart speed is 0.4
+default-speed: 0.8
 blocks:
   COARSE_DIRT: 0.4
   SOUL_SAND: 0.2
+  GRAVEL: 1.0
