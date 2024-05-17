@@ -34,9 +34,7 @@ class FastMinecarts : JavaPlugin(), Listener {
 
     @EventHandler(ignoreCancelled = true)
     fun onVehicleMove(event: VehicleMoveEvent) {
-        if (event.vehicle !is Minecart) return
-
-        val minecart = event.vehicle as Minecart
+        val minecart = event.vehicle as? Minecart ?: return
 
         val railBlock = event.vehicle.location.block
         if (!Tag.RAILS.isTagged(railBlock.type))
