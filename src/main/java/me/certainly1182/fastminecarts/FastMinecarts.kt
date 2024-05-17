@@ -39,7 +39,8 @@ class FastMinecarts : JavaPlugin(), Listener {
         val minecart = event.vehicle as Minecart
 
         val railBlock = event.vehicle.location.block
-        if (!Tag.RAILS.isTagged(railBlock.type)) return
+        if (!Tag.RAILS.isTagged(railBlock.type))
+            return minecart.setMaxSpeed(defaultMaxSpeed)
 
         val blockBelow = railBlock.getRelative(0, -1, 0)
         minecart.maxSpeed = blockMaxSpeeds[blockBelow.type] ?: defaultMaxSpeed
